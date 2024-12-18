@@ -5,8 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import resuableAbstractmethods.Abstractcomp;
 
-public class LoginPageObjectclss {
+
+public class LoginPageObjectclss extends Abstractcomp {
 	
 	WebDriver driver;
 	@FindBy(id="email")
@@ -22,7 +24,7 @@ public class LoginPageObjectclss {
 
 	
 	public LoginPageObjectclss(WebDriver driver) {
-		
+	super(driver);	
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 		
@@ -30,7 +32,8 @@ public class LoginPageObjectclss {
 	
 	
 	public void dologin(String x, String y) {
-		
+		maximize();
+		implicitwait(5);
 		userEmail.sendKeys(x);
 	 userPassword.sendKeys(y);
 		LoginButton.click();
