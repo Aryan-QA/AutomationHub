@@ -1,23 +1,20 @@
 package testScriptt;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 import fbPageObject.LoginPageObjectclss;
-public class Basictest {
+public class Basictest extends GenericTestforall{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-     WebDriver driver=new ChromeDriver();
-     driver.get("https://www.facebook.com/");
-     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-     driver.manage().window().maximize();
-     
-     LoginPageObjectclss lpo=new LoginPageObjectclss(driver);
-     lpo.dologin("a@gmail.com", "abcds");
-     
-	}
+	 @Test
+	public void m1() throws IOException {
+		
+		 //launchandLogin();
+		 tryloginandgotoreg();
+		 doRegistarion();	}
 
 }
