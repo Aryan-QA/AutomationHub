@@ -6,6 +6,7 @@
       <class name="testScriptt.Basictest">
         <methods>
           <include name="m1"/>
+          <include name="breakDown"/>
         </methods>
       </class> <!-- testScriptt.Basictest -->
     </classes>
