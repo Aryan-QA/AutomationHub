@@ -29,6 +29,7 @@ public class LoginPageObjectclss extends Abstractcomp {
 	
 	public LoginPageObjectclss(WebDriver driver) {
 	super(driver);	 
+	
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 		

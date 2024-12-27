@@ -13,8 +13,9 @@ public class Basictest extends GenericTestforall{
 	 @Test
 	public void m1() throws IOException {
 		
-		 //launchandLogin();
-		 tryloginandgotoreg();
-		 doRegistarion();	}
+		// launchandLogin();
+		 tryloginandgotoreg(); 
+		 doRegistarion(); 
+		 }
 
 }

@@ -43,11 +43,12 @@ public class GenericTestforall {
 	    initialisedriver();	
 		LoginPageObjectclss lg=new LoginPageObjectclss(driver);
 	lg.goToLogin();
-	lg.dologin("str1","str2");
+	//lg.dologin("abvc","342");
 		
 	}
 	
-	public void tryloginandgotoreg() {
+	public void tryloginandgotoreg() throws IOException {
+		initialisedriver();	
 		LoginPageObjectclss lg=new LoginPageObjectclss(driver);
 		lg.goToLogin();
 		lg.enterUnandPw("abcd","2345");
