@@ -1,4 +1,5 @@
 package testScriptt;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,26 +14,38 @@ import java.util.Properties;
 
 public class GenericTestforall {
    WebDriver driver;
+
    
 	public WebDriver initialisedriver() throws IOException {
 	Properties prop=new Properties();	
 	FileInputStream fis=new FileInputStream("C:\\Users\\Cloud Laptop\\eclipse-workspace\\Autoframwork\\src\\main\\java\\resources\\globaldata.properties");
 	prop.load(fis);
 	String browsername =prop.getProperty("browser");
-      System.out.println(browsername);
-	if(browsername.equals("chrome")) {
+	 System.out.println("Browser selected: " + browsername);
+      
+   if(browsername.equalsIgnoreCase("chrome")) {
+	
 		 driver=new ChromeDriver();
 		 
-	}
-	else if(browsername.equalsIgnoreCase("firefox"));
-	{
+		 }
+	 else if(browsername.equalsIgnoreCase("firefox"))
+	     {
 		 driver=new FirefoxDriver();
-	}
-	return driver;
+	     } 
+	  else{
+        System.out.println("Browser not Found");
+       }
+	    return driver;
 	
 	}
 	
 	
+	private void elseif(boolean equalsIgnoreCase) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 	//public  void launchapp() throws IOException {
 	//driver=	initialisedriver();	
 	//	LoginPageObjectclss lg=new LoginPageObjectclss(driver);
